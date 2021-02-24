@@ -4,11 +4,13 @@
 
 
 int main( void ) {
-    Vertex *vert = new Vertex(4);
-    Edge   *edge = new Edge(vert, nullptr);
+    Vertex *a = new Vertex(2);
+    Vertex *b = new Vertex(4);
+    
+    Edge::create_edge(a, b);
 
-    vert->set_vertex_value(5);
-    edge->start->print();
+    a->set_vertex_value(5);
+    a->edges.front()->end->print();
 
     return 0;
 }

@@ -18,5 +18,10 @@ void Vertex::set_vertex_value(vertex_value number) {
 
 // Print the vertex value
 void Vertex::print() {
-    std::cout << this->value << " ";
+    std::cout << this->value << " \n";
+}
+
+void Vertex::add_edge(Edge *edge)
+{
+    edges.push_back(edge);
 }

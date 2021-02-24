@@ -3,6 +3,8 @@
 
 #include <cstdint>
 #include <string>
+
+class Vertex;
 #include "vertex.hpp"
 
 using edge_value = int32_t;
@@ -17,7 +19,8 @@ public:
     Vertex *end;
 
     // Constructor
-    Edge(Vertex *start = nullptr, Vertex *end = nullptr, edge_value value = 0, bool isDirecional = true);
+    Edge(Vertex *start, Vertex *end, edge_value value, bool isDirecional);
+    static void create_edge(Vertex *start, Vertex *end);
 
 };
 

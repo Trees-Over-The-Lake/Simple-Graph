@@ -3,23 +3,32 @@
 
 #include <cstdint>
 #include <string>
+#include <list>
+
+class Edge;
+#include "edge.hpp"
 
 using vertex_value = int32_t;
 
 // Graph vertex
 class Vertex {
     vertex_value value;
+     
 
-public:
-    // Constructor
-    Vertex(vertex_value value = 0);
+    public:
+        std::list<Edge*> edges;
 
-    // Sets and Gets
-    void set_vertex_value(vertex_value number);
-    vertex_value get_vertex_value();
+        // Constructor
+        Vertex(vertex_value value);
 
-    // Print the vertex value
-    void print();
+        // Sets and Gets
+        void set_vertex_value(vertex_value value);
+        vertex_value get_vertex_value();
+
+        // Print the vertex value
+        void print();
+
+        void add_edge(Edge *edge);
 
 };
 
