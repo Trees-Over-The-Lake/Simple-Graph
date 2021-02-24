@@ -26,7 +26,7 @@ class Vertex {
         vertex_value get_vertex_value();
 
         // Print the vertex value
-        void print();
+        void print_this_vertex();
 
         void add_edge(Edge *edge);
 

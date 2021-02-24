@@ -1,6 +1,5 @@
 #include <iostream>
-#include "Graph/vertex.hpp"
-#include "Graph/edge.hpp"
+#include "graph.hpp"
 
 
 int main( void ) {
@@ -10,7 +9,15 @@ int main( void ) {
     Edge::create_edge(a, b);
 
     a->set_vertex_value(5);
-    a->edges.front()->end->print();
+    a->edges.front()->end->print_this_vertex();
+
+    Graph graph;
+
+    graph.insert_vertex(5);
+    graph.insert_vertex(2);
+    graph.insert_vertex(7);
+
+    graph.print_all_vertex();
 
     return 0;
 }
