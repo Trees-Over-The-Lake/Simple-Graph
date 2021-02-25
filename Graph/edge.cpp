@@ -8,6 +8,11 @@ Edge::Edge(Vertex *start, Vertex *end, edge_value value, bool isDirecional) {
     this->is_direcional = isDirecional;
 }
 
+// Get edge value
+edge_value Edge::get_edge_value(){
+    return this->value;
+}
+
 void Edge::create_edge(Vertex *start, Vertex *end)
 {
     Edge *teste = new Edge(start, end, 5, true);

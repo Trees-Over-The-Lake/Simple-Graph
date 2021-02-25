@@ -21,7 +21,6 @@ void Vertex::print_this_vertex() {
     std::cout << this->value << " ";
 }
 
-void Vertex::add_edge(Edge *edge)
-{
-    edges.push_back(edge);
+void Vertex::add_edge(Edge *edge) {
+    this->edges.push_back(edge);
 }

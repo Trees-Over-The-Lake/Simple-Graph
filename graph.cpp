@@ -2,22 +2,44 @@
 
 #include "graph.hpp"
 
-// Insert a new Vertex to the graph
-bool Graph::insert_vertex(vertex_value value) {
-    bool inserted = false;
+// Insert a new Vertex to the graph and return if its successful
+bool Graph::insert_vertex(Vertex *vert) {
+    // Inserting the element into the list
+    // Verifying if this value is already inserted, if it is return a error
+    for(auto i : this->all_vertex_values) {
+        if(i == vert->get_vertex_value()) {
+            std::cerr << "Error inserting " << i << "!\nThis value is already inserted in the graph!" << std::endl; 
+            return false;
+        }
+    }
+    
+    // Inserting the new value in the list
+    this->all_vertex_values.push_back(vert->get_vertex_value());
 
-    this->all_vertex_values.push_back(value);
+    // Inserting in the real graph
 
-    return inserted;
+
+
+    return true;
 }
 
-// Insert a new edge to the graph
-bool Graph::insert_edge(edge_value value) {
-    bool inserted = false;
+// Insert a new edge to the graph and return if it is successful
+bool Graph::insert_edge(Edge *edge) {
+    // Inserting the element into the list
+    // Verifying if this value is already inserted, if it is return a error
+    for(auto i : this->all_edge_values) {
+        if(i == edge->get_edge_value()) {
+            std::cerr << "Error inserting " << i << "!\nThis value is already inserted in the graph!" << std::endl; 
+            return false;
+        }
+    }
+    
+    // Inserting the new value in the list
+    this->all_edge_values.push_back(edge->get_edge_value());
 
+    // Inserting in the real graph
 
-
-    return inserted;
+    return true;
 }
 
 // Print all vertex values
@@ -40,4 +62,9 @@ void Graph::print_all_edge() {
     }
 
     std::cout << "]" << std::endl;
+}
+
+// Print all graph
+void Graph::print_all_graph() {
+    
 }
