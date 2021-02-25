@@ -22,6 +22,9 @@ class Graph {
         void print_all_vertex();
         void print_all_edge();
         void print_all_graph();
+
+        // Sort graph 
+        void sort_graph();
 };
 
 #endif
