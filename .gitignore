@@ -1,2 +1,10 @@
 # Excluding executables
 *.out
+
+# Excluding LaTex compilation files
+*.aux
+*.fls
+*.log
+
+# Excluding the generated PDF
+*.pdf

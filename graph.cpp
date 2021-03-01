@@ -68,7 +68,7 @@ void Graph::print_all_graph() {
     size_t vertexSize = this->all_vertex_values.size();
     size_t edgeSize   = this->all_edge_values.size();
 
-    // All values sorted
+    // Sorting the values to make a better print
     int count = 0;
     vertex_value allVertexValuesSorted[vertexSize];
     for(auto i : this->all_vertex_values) {
@@ -84,7 +84,7 @@ void Graph::print_all_graph() {
         count++;
     }
     std::sort(allEdgeValuesSorted, allEdgeValuesSorted + sizeof(allEdgeValuesSorted) / sizeof(allEdgeValuesSorted[0]));
-
+    // ------------------------------------------------- //
 
     // Creating the matrix
     int graphMatrix[vertexSize][edgeSize];
@@ -97,4 +97,16 @@ void Graph::print_all_graph() {
             graphMatrix[i][j];
         }
     }
+}
+
+// ----------- DirectGraph Graph ----------- //
+
+DirectGraph::DirectGraph(Vertex *root) : Graph(true, root) {
+    return;
+}
+
+// ----------- NonDirectGraph Graph ----------- //
+
+NonDirectGraph::NonDirectGraph(Vertex *root) : Graph(false, root) {
+    return;
 }
