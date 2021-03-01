@@ -9,7 +9,7 @@ int main( void ) {
 
     Edge *UnionA_B = new Edge(a, b, 12, true);
     
-    Graph graph;
+    Graph graph = new Graph();
     graph.insert_vertex(a);
     graph.insert_vertex(b);
     graph.insert_vertex(c);

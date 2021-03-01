@@ -3,8 +3,8 @@
 
 #include <list>
 
-#include "Graph/vertex.hpp"
-#include "Graph/edge.hpp"
+#include "graph/vertex.hpp"
+#include "graph/edge.hpp"
 
 // A mid-level implementation for a graph struct
 class Graph {

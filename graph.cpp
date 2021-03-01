@@ -3,6 +3,12 @@
 
 #include "graph.hpp"
 
+// Constructor of the Graph
+Graph::Graph(bool is_directional_graph, Vertex *root) {
+    this->is_directional_graph = is_directional_graph;
+    this->root                 = root;
+}
+
 // Insert a new Vertex to the graph and return if its successful
 bool Graph::insert_vertex(Vertex *vert) {
     // Inserting the element into the list

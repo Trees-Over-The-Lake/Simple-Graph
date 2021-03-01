@@ -1,4 +1,4 @@
-obj = main.cpp graph.cpp Graph/edge.cpp Graph/vertex.cpp
+obj = main.cpp graph.cpp graph/edge.cpp graph/vertex.cpp
 executable = graph.out
 
 all:
