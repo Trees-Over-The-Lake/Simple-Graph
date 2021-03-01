@@ -5,6 +5,8 @@
 *.aux
 *.fls
 *.log
+*.fdb_latexmk
+*.gz
 
 # Excluding the generated PDF
 *.pdf
