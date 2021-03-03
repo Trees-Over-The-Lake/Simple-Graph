@@ -14,9 +14,15 @@ documentation:
 	find . -name *.fls -delete
 	find . -name *.aux -delete
 	
+	find . -name *.synctex.gz  -delete
+	find . -name *.fdb_latexmk -delete
+	
 clean:
 	find . -name *.out -delete
 	find . -name *.pdf -delete
 	find . -name *.log -delete
 	find . -name *.fls -delete
 	find . -name *.aux -delete
+	
+	find . -name *.synctex.gz  -delete
+	find . -name *.fdb_latexmk -delete
