@@ -30,6 +30,8 @@ class Vertex {
 
         void add_edge(Edge *edge);
 
+        bool is_equal(Vertex *vertex);
+
 };
 
 #endif
