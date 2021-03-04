@@ -8,6 +8,7 @@ int main( void ) {
     Vertex *d = new Vertex(2);
 
     Edge *UnionA_B = new Edge(a, b, 12, true);
+    Edge *UnionA_C = new Edge(a, c, 47, false);
     
     Graph graph;
     graph.insert_vertex(a);
@@ -15,12 +16,14 @@ int main( void ) {
     graph.insert_vertex(c);
     graph.insert_vertex(d);
 
-    graph.print_all_vertex();
-
     graph.insert_edge(UnionA_B);
+    graph.insert_edge(UnionA_C);
 
-    graph.print_all_edge();
+    //graph.remove_vertex(a);
+    //graph.remove_edge(UnionA_B);
 
+    graph.print_all_vertexes();
+    graph.print_all_edges();
     graph.print_all_graph();
 
     return 0;

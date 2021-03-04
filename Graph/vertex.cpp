@@ -24,3 +24,15 @@ void Vertex::print_this_vertex() {
 void Vertex::add_edge(Edge *edge) {
     this->edges.push_back(edge);
 }
+
+
+bool Vertex::is_equal(Vertex *vertex)
+{
+    bool is_equal = false;
+    if(this->get_vertex_value() == vertex->get_vertex_value())
+    {
+        is_equal = true;
+    }
+
+    return is_equal;
+}

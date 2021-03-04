@@ -50,6 +50,25 @@
 \begin{document}
 \maketitle
 
+We implemented a graph thinking about the performance of insertions and removal.
+Letting the overhead to the print function. We thought about how to make a very generic object
+to simplify our future use, I'll explain better in the nexts paragraphs.
 
+The $Vertex$ and $Edge$ classes are made to hold the graph values and they are only used in the $Graph$.
+Both classes have their own values only.
+
+Graph class is the the lowest-level implementation, this class handles 
+everything in the basic-level. Inserting, removing and printing on the screen the values.
+The ideia is to make a class that holds all the vertex and its edges.
+
+For the mid-level we made $DirectGraph$ and $NonDirectGraph$. The first one was thought to be a directional
+graph, with an auto set of the $is\_directional$ to true the other one is the opposite. In that way,
+will be easier in the future when we need to have a specific type of graph. We let the $Graph$ implementation public,
+thinking about a use of a mixed graph if it's necessary (for whom import our lib).
+
+All the graphs is weighted, to make a non-weighted graph it's simple as calling the create function of the $Edge$
+without passing a value on it. Will be passed -1, negative values are impossible in our graphs, so we are using
+it as flag. The most human-readable part is the print, that iterate through the list and see all conections
+and make a simple and organized text to the end-user.
 
 \end{document}
